@@ -35,9 +35,7 @@ def main():
     @bot.event
     async def on_connect():
         channel = bot.get_channel(CHANNEL)
-        print(channel)
-        await channel.send("Entti is here!")
-        print(f'{bot.user.name} has connected to Discord!')
+        await channel.send(f'{bot.user.name} has connected to Discord!')
 
     @bot.command(name="weather")
     async def weather(ctx, arg):
